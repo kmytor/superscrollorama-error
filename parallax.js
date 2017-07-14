@@ -13,21 +13,19 @@ $(document).ready(function () {
 			
 			
 			 // build animation
-        var myAnimation = new TimelineMax();
-        myAnimation.add([
+        var anime = new TimelineMax();
+        anime.add([
                     TweenMax.fromTo($('.bike-uno'), 1, 
-                        {css:{rotation: 0}, immediateRender:true}, 
-                        {css:{rotation: 40}, ease:Quad.easeInOut}),
-                    TweenMax.fromTo($('#trigger'), 1, 
-                        {css:{rotation: 0}, immediateRender:true}, 
-                        {css:{rotation: 40}, ease:Quad.easeInOut})
+                        {css:{top: 0}, immediateRender:true}, 
+                        {css:{top: 40}, ease:Quad.easeInOut}),
+                   
             ])
             .add(
-                    TweenMax.to($('.bike-uno'), 1, {css:{rotation: 0}})
+                    TweenMax.to($('.bike-uno'), 1, {css:{top: 0}})
             );
 
         // add the tween to superscrollorama
-        controller.addTween('.magic', myAnimation, 500, 200);
+        controller.addTween('.magic', anime, 500, 200);
 
 			
 			
