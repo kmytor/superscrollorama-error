@@ -17,7 +17,7 @@ $(document).ready(function () {
         anime.add([
                     TweenMax.fromTo($('.bike-uno'), 1, 
                         {css:{top: 0}, immediateRender:true}, 
-                        {css:{top: 40}, ease:Quad.easeInOut}),
+                        {css:{top: 400}, ease:Quad.easeInOut}),
                    
             ])
             .add(
